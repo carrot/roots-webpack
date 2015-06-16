@@ -4,7 +4,7 @@ webpack        = require 'webpack'
 {EventEmitter} = require 'events'
 
 module.exports = (opts) ->
-  if not opts.output then throw new Error('output option is required')
+  if not opts.filename then opts.filename = 'bundle.js'
 
   initialized = false
   compiler = null
@@ -14,12 +14,14 @@ module.exports = (opts) ->
 
     constructor: (@roots) ->
       if not initialized
+        initialized = true
         opts.context = @roots.root
-        opts.output = path.join(@roots.config.output_path(), opts.output)
+        opts.output.path = path.join(@roots.config.output_path())
         compiler = webpack(opts)
+
         compiler.watch opts.watchDelay or 200, (err, stats) ->
-          if err then return emitter.emit('err', err)
-          emitter.emit('stats', stats)
+          if err then return console.error('ERROR: ', err)
+          console.log('STATS: ', stats.toJson())
 
         # debug
         emitter.on('err', console.error)
