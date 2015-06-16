@@ -1,9 +1,11 @@
-Roots-webpack
+Roots Webpack
 =============================
 
 [![npm](https://badge.fury.io/js/roots-webpack.svg?style=flat)](http://badge.fury.io/js/roots-webpack) [![tests](https://badge.fury.io/travis/carrot/roots-webpack/master.svg?style=flat)](https://travis-ci.org/carrot/roots-webpack) [![dependencies](https://badge.fury.io/gemnasium/carrot/roots-webpack.svg?style=flat)](https://gemnasium.com/carrot/roots-webpack) [![Coverage Status](https://img.shields.io/coveralls/carrot/roots-webpack.svg?style=flat)](https://coveralls.io/r/carrot/roots-webpack?branch=master)
 
 Webpack as an asset pipeline for roots
+
+> **NOTE:** This repo is still a work in progress, not yet ready for use.
 
 > **Note:** This project is in early development, and versioning is a little different. [Read this](http://markup.im/#q4_cRZ1Q) for more details.
 
@@ -17,7 +19,7 @@ Webpack as an asset pipeline for roots
   rootsWebpack = require('roots-webpack')
 
   module.exports =
-    extensions: [rootsWebpack()]
+    extensions: [rootsWebpack({ options: '...' })]
   ```
 
 ### Usage
