@@ -1,0 +1,39 @@
+{
+  "name": "roots-webpack",
+  "version": "0.0.0",
+  "description": "Webpack as an asset pipeline for roots",
+  "main": "lib",
+  "dependencies": {
+    "lodash": "2.x",
+    "minimatch": "2.x",
+    "roots-util": "0.1.x",
+    "webpack": "^1.8.5"
+  },
+  "devDependencies": {
+    "chai": "1.x",
+    "chai-fs": "0.1.x",
+    "coffee-script": "1.7.x",
+    "coveralls": "2.x",
+    "istanbul": "0.3.x",
+    "mocha": "2.x",
+    "roots": "3.0.x"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "coverage": "make build; NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha; make unbuild; open coverage/lcov-report/index.html;",
+    "coveralls": "make build; make coveralls; make unbuild;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carrot/roots-webpack.git"
+  },
+  "keywords": [
+    "rootsextension"
+  ],
+  "author": "Jeff Escalante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carrot/roots-webpack/issues"
+  },
+  "homepage": "https://github.com/carrot/roots-webpack"
+}
