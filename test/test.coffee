@@ -1,6 +1,5 @@
 path      = require 'path'
 Roots     = require 'roots'
-
 require './helpers'
 
 # setup, teardown, and utils
@@ -14,22 +13,21 @@ after -> h.project.remove_folders('**/public')
 
 # tests
 
-describe 'development', ->
+describe 'basic', ->
 
   before (done) -> compile_fixture.call(@, 'basic', done)
 
-  it 'compiles basic project', ->
+  it 'compiles a basic bundle', ->
     p = path.join(@public, 'bundle.js')
     p.should.be.a.file()
+    should.matchExpected(p)
 
 
-describe 'css bundle', ->
+describe 'css', ->
 
   before (done) -> compile_fixture.call(@, 'css-bundle', done)
 
   it 'compiles a css bundle', ->
     p = path.join(@public, 'bundle.js')
     p.should.be.a.file()
-
-    # verify contents are okay
-    # should.matchExpected(p)
+    should.matchExpected(p)
