@@ -1,0 +1,7 @@
+{
+  "name": "css-bundle-test",
+  "version": "0.0.0",
+  "dependencies": {
+    "extract-text-webpack-plugin": "0.8.x"
+  }
+}

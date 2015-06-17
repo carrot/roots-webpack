@@ -1,6 +1,8 @@
 path      = require 'path'
 Roots     = require 'roots'
 
+require './helpers'
+
 # setup, teardown, and utils
 
 compile_fixture = (fixture_name, done) ->
@@ -19,3 +21,15 @@ describe 'development', ->
   it 'compiles basic project', ->
     p = path.join(@public, 'bundle.js')
     p.should.be.a.file()
+
+
+describe 'css bundle', ->
+
+  before (done) -> compile_fixture.call(@, 'css-bundle', done)
+
+  it 'compiles a css bundle', ->
+    p = path.join(@public, 'bundle.js')
+    p.should.be.a.file()
+
+    # verify contents are okay
+    # should.matchExpected(p)
