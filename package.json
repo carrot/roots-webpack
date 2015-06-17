@@ -10,6 +10,7 @@
     "webpack": "^1.8.5"
   },
   "devDependencies": {
+    "acorn": "^1.2.2",
     "chai": "1.x",
     "chai-fs": "0.1.x",
     "coffee-script": "1.7.x",
