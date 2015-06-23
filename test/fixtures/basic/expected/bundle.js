@@ -42,9 +42,17 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var doge = __webpack_require__(1);
+	module.exports = function() { console.log(doge); };
+
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
-	module.exports = function() { console.log('hello world!'); };
+	module.exports = "wow"
 
 
 /***/ }

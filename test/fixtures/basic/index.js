@@ -1,1 +1,2 @@
-module.exports = function() { console.log('hello world!'); };
+var doge = require('./doge');
+module.exports = function() { console.log(doge); };

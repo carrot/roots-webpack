@@ -11,7 +11,8 @@ module.exports = should.matchExpected = (target) ->
   fs.existsSync(expectedPath).should.be.ok
   expected = parser(fs.readFileSync(expectedPath, 'utf8'))
   results = parser(fs.readFileSync(target, 'utf8') + '\n')
-  util.inspect(results).should.eql(
-    util.inspect(expected),
+
+  JSON.stringify(results).should.eql(
+    JSON.stringify(expected),
     "expected output doesn't match"
   )
