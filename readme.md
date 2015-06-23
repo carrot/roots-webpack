@@ -16,7 +16,7 @@ Webpack as an asset pipeline for roots
   webpack = require('roots-webpack')
 
   module.exports =
-    extensions: [webpack(entry: './index', output: {filename: 'bundle.js'})]
+    extensions: [webpack(entry: './index', output: { filename: 'bundle.js' })]
   ```
 
 ## Usage
