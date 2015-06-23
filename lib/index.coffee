@@ -23,6 +23,6 @@ module.exports = (opts) ->
           if err
             throw new Error(err)
           else if (statsJson = stats.toJson()).errors.length > 0
-            throw new Error(error) for error of statsJson.errors
+            throw new Error(error) for i, error of statsJson.errors
           else if statsJson.warnings.length > 0
-            throw new Error(error) for error of statsJson.warnings
+            throw new Error(error) for i, error of statsJson.warnings
