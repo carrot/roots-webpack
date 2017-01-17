@@ -7,7 +7,7 @@
     "lodash": "2.x",
     "minimatch": "2.x",
     "roots-util": "0.1.x",
-    "webpack": "^1.8.5 || >2.1.0-beta"
+    "webpack": "^1.8.5 || >2.1.0-beta || >2.2.0-rc"
   },
   "devDependencies": {
     "acorn": "^1.2.2",
